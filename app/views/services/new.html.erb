@@ -5,6 +5,20 @@
     </div>
     <div class="panel-body">
       <%= form_for @service do |f| %>
+        <% if @service.errors.any? %>
+        <div class="alert alert-info">
+          <h3>
+            Fix the following <%= pluralize(@service.errors.count, "error") %> before continuing:
+          </h3>
+          <ul>
+            <% @service.errors.full_messages.each do |msg| %>
+            <li>
+              <%= msg %>
+            </li>
+            <% end %>
+        </ul>
+      </div>
+      <% end %>
           <div class="form-group">
               <label>Gig Title</label>
               <%= f.text_area :title, placeholder: "Ex: I will do something I am really good at", rows: "2", class:"form-control" %>
