@@ -7,6 +7,10 @@ body {
 .navbar {
   margin-bottom: 0px;
 }
+
+.navbar-avatar {
+  width: 22px;
+}
 .btn, .btn:active, .btn-primary:active, .btn-default:active, .btn.active, .btn:focus, .btn:hover {
 	background-color: #00b22d;
 	background: -webkit-linear-gradient(#35c350, #03b525);
@@ -124,4 +128,13 @@ select {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px 30px;
+}
+
+.btn-facebook, .btn-facebook:hover {
+  background: #3b5998;
+  border-color: #3b5998;
+}
+
+.panel-default .panel-heading {
+  background-color: white;
 }
