@@ -10,4 +10,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       redirect_to_new_user_registration_url
     end
   end
+
+  def failure
+    redirect_to root_path
+  end
 end
